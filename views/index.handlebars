@@ -1,43 +1,51 @@
 <div class="container">
- <div class="row">
-   <div class="col-md-12"></div>
- </div>
- <div class="row">
-   <div class="col-md-6" id="not_eaten">
-     
-       {{#each burger}}
-        {{#unless devoured }}
-     <div class="row">
-       <div class="col-md-6">
-         <p>{{burger_name}}</p>
-         <button data-id={{id}} class="eat">EAT</button>
-       </div>
-     </div>
+  <div class="row">
+    <div class="col-md-12" id="title">
+      <h1>WELCOME TO EAT DA Burger</h1>
+      <p> List down the burgers you want to eat and will keep them tracked
 
-       {{/unless}}
-       {{/each}}
-   </div>
-
-
-    <div class="col-md-6"  id="eaten">
-       {{#each burger}}
-        {{#if devoured }}
-     <div class="row">
-       <div class="col-md-12">
-         <p>{{burger_name}}</p>
-       </div>
-     </div>
-
-       {{/if}}
-
-     {{/each}}
+      </p>
     </div>
- </div>
- <div class="row"></div>
- <div class="col-md-12">
-   <input type="text" id="new_burger">
-   <button type="submit" id="burger">New Burger</button>
- </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6" id="not_eaten">
+
+      {{#each burger}}
+      {{#unless devoured }}
+      <div class="row">
+        <div class="col-md-9">
+          <p class="burger_name">{{burger_name}}</p>
+
+        </div>
+        <div class="col-md-3">
+          <button data-id={{id}} class="eat">EAT</button>
+        </div>
+      </div>
+
+      {{/unless}}
+      {{/each}}
+    </div>
+
+
+    <div class="col-md-6" id="eaten">
+      {{#each burger}}
+      {{#if devoured }}
+      <div class="row ">
+        <div class="col-md-12">
+          <p class="burger_name">{{burger_name}}</p>
+        </div>
+      </div>
+
+      {{/if}}
+
+      {{/each}}
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12" id="new">
+    <input type="text" id="new_burger">
+    <button type="submit" id="burger">New Burger</button>
+  </div>
+  </div>
+
 </div>
-
-

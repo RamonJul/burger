@@ -1,0 +1,29 @@
+.container{
+    margin-top: 20px;
+}
+
+#new{
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end;
+}
+
+.burger_name,#title{
+    text-align: center;
+}
+#new_burger{
+    width:50%;
+    height: 40px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#burger{
+
+    width: 20%;
+    text-align: center;
+    margin: auto;
+}
+.row{
+    margin: 10px 0;
+}

@@ -13,7 +13,7 @@ var burger = {
     },
     updateOne: function (id, callback) {
         orm.updateOne(id, function (result) {
-                callback
+                callback(result)
             }
 
         )
