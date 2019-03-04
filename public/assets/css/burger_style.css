@@ -1,3 +1,10 @@
+body{
+    background-color:#282726 ; 
+    color: #E1DFDD;
+}
+#burger_pic{
+    float: left;
+}
 .container{
     margin-top: 20px;
 }
@@ -8,8 +15,11 @@
     justify-content: flex-end;
 }
 
-.burger_name,#title{
+.burger_name,#title{ 
     text-align: center;
+}
+.btn{
+    background-color: #E78005  ; 
 }
 #new_burger{
     width:50%;
