@@ -4,11 +4,11 @@ var burger = require("./../models/burger.js")
 
 router.get("/", function (req, res) {
     burger.selectAll(function (result) {
-    
-        var burger_obj={
-            burger:result
+
+        var burger_obj = {
+            burger: result
         }
-        res.render("index.handlebars",burger_obj)
+        res.render("index.handlebars", burger_obj)
     });
 
 });
@@ -26,6 +26,13 @@ router.put("/api/burger/:id", function (req, res) {
     })
 
 })
+router.delete("/api/burger/:id", function (req, res) {
+    burger.deleteOne(req.params.id, function (result) {
+        console.log("controller")
+        res.json(result)
+    })
+
+})
 
 //post and put needs to refresh the page to do anything afterwards
-module.exports=router;
+module.exports = router;

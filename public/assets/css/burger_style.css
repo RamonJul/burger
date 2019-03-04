@@ -3,7 +3,11 @@ body{
     color: #E1DFDD;
 }
 #burger_pic{
-    float: left;
+width: 300px;
+position: fixed;
+top:0;
+
+
 }
 .container{
     margin-top: 20px;
@@ -15,12 +19,26 @@ body{
     justify-content: flex-end;
 }
 
-.burger_name,#title{ 
+#title{ 
     text-align: center;
+}
+h4{
+    text-align: center;
+    width: 100%;
 }
 .btn{
     background-color: #E78005  ; 
 }
+.burger_name{
+    text-align: right;
+    font-size: 1.5rem;
+}
+.remove{
+    background-color: transparent;
+    color: white;
+    padding-left: 0;
+}
+
 #new_burger{
     width:50%;
     height: 40px;
@@ -34,6 +52,11 @@ body{
     text-align: center;
     margin: auto;
 }
+
+.remove_col{
+    padding-left: 0;
+}
+
 .row{
     margin: 10px 0;
 }

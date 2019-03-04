@@ -13,11 +13,21 @@ $(document).ready(function () {
 
     function eaten() {
         var id = this.getAttribute("data-id")
-    
+
         $.ajax(`/api/burger/${id}`, {
             type: "PUT",
         }).then(function () {
-            console.log("you ate")
+            location.reload()
+        })
+    }
+
+    function remove() {
+        var id = this.getAttribute("data-id")
+
+        $.ajax(`/api/burger/${id}`, {
+            type: "DELETE",
+        }).then(function () {
+            console.log("delete")
             location.reload()
         })
     }
@@ -30,6 +40,9 @@ $(document).ready(function () {
         buttons[i].addEventListener("click", eaten)
     }
 
-
+    var x = document.getElementsByClassName("remove")
+    for (let i = 0; i < x.length; i++) {
+        x[i].addEventListener("click", remove)
+    }
 
 })

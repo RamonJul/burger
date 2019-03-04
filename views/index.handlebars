@@ -10,7 +10,8 @@
   </div>
   <div class="row">
     <div class="col-md-6" id="not_eaten">
-
+      <div class="row"><h4>Buger You Wanna Eat</h4></div>
+  
       {{#each burger}}
       {{#unless devoured }}
       <div class="row">
@@ -29,11 +30,20 @@
 
 
     <div class="col-md-6" id="eaten">
+       <div class="row"><h4>Buger You Ate</h4></div>
       {{#each burger}}
       {{#if devoured }}
       <div class="row ">
-        <div class="col-md-12">
-          <p class="burger_name">{{burger_name}}</p>
+        <div class="col-md-9 eaten_col">
+          <p class="burger_name">{{burger_name}}
+
+            
+          </p>
+         
+        </div>
+        <div class="col-md-3 remove_col">
+            <button type="button" data-id={{id}} class="btn remove" >
+          <span aria-hidden="true">&times;</span>
         </div>
       </div>
 
